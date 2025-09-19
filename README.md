@@ -1,12 +1,21 @@
+# Nyams Portfolio (Polished Version)
 
-# Nyams Tech — Portfolio
+This is my personal portfolio website showcasing my skills, experience, and projects.  
+It is fully responsive and polished with a modern UI/UX design.
 
-This is a static portfolio site for **Nyams Tech** (Caleb). It includes a loading splash screen, a polished homepage, and glowing expandable cards for About, Skills, Experience, Projects, Services, and Contact (with a demo Reach Us modal).
+## 🌐 Live Demo
+👉 [View Portfolio](https://nyamsprojects.github.io/nyams-portfolio-polished/)
 
-## How to use locally
-1. Download the files
-2. Open `index.html` in a browser (or serve using a static server)
-3. Edit content in `portfolio.html`
+## ✨ Features
+- Responsive modern design
+- Sections: About, Skills, Experience, Services, Projects
+- Contact form (with placeholder for backend integration)
+- Smooth animations and professional styling
 
-## Deployment
-Push the files to a GitHub repository and enable GitHub Pages (Settings → Pages → Branch: main → Folder /root).
+## 🛠️ Tech Stack
+- HTML5
+- CSS3
+- JavaScript
+
+## 📩 Contact
+Feel free to reach out through the **Contact** section of the site!
