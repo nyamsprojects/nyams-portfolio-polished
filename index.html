@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nyams Tech — Loading</title>
+  <link href="style.css" rel="stylesheet">
+  <style>
+    /* overrides for splash */
+    body { background: white; color: #111; }
+    #splash { height:100vh; display:flex; align-items:center; justify-content:center; flex-direction:column; }
+    .progress-circle { width:200px; height:200px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:conic-gradient(#ff4da6 0deg, #eee 0deg); box-shadow:0 0 30px rgba(255,77,166,0.12); position:relative; }
+    #percent { font-size:22px; color:#111; font-weight:700; }
+    #logoSmall { width:120px; height:120px; border-radius:50%; object-fit:cover; position:absolute; z-index:2; }
+    #status { margin-top:18px; color:#b8863a; font-weight:600; }
+    .fade-out { animation: fadeOut 0.9s forwards; }
+    @keyframes fadeOut { to { opacity:0; visibility:hidden } }
+  </style>
+</head>
+<body onload="runLoaderAndRedirect()">
+  <div id="splash">
+    <div class="progress-circle" id="progressCircle">
+      <img id="logoSmall" src="https://i.imgur.com/yFyMCY9.png" alt="Nyams Tech Logo">
+      <div id="percent">0%</div>
+    </div>
+    <div id="status">Loading Projects...</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

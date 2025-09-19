@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NYAMS TECH — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <img src="https://i.imgur.com/yFyMCY9.png" alt="Nyams Tech logo">
+      <h1>NYAMS TECH</h1>
+    </div>
+
+    <div class="nav-actions" role="navigation" aria-label="Main navigation">
+      <button class="btn" onclick="document.getElementById('aboutCard').scrollIntoView({behavior:'smooth'})">About</button>
+      <button class="btn" onclick="document.getElementById('skillsCard').scrollIntoView({behavior:'smooth'})">Skills</button>
+      <button class="btn" onclick="document.getElementById('experienceCard').scrollIntoView({behavior:'smooth'})">Experience</button>
+      <button class="btn" onclick="document.getElementById('projectsCard').scrollIntoView({behavior:'smooth'})">Projects</button>
+      <button class="btn" onclick="document.getElementById('servicesCard').scrollIntoView({behavior:'smooth'})">Services</button>
+      <button class="btn" onclick="document.getElementById('contactCard').scrollIntoView({behavior:'smooth'})">Contact</button>
+      <button class="btn" onclick="toggleTheme()" aria-pressed="false">Theme</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" role="banner">
+      <div class="content">
+        <h2>Modern Web & IT Solutions</h2>
+        <p>Mr Nyams — Web Development · Information Technology Company</p>
+        <button class="open-cta" onclick="document.getElementById('aboutCard').scrollIntoView({behavior:'smooth'})">Open</button>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <!-- About -->
+      <section class="section" id="about">
+        <div class="card" id="aboutCard" data-preview="<p style='color:var(--muted)'>I’m Caleb, a strategic web project designer and hands-on coder who thrives at the intersection of precision and creativity. I specialize in building scalable, user-friendly portals that blend secure architecture with custom branding...</p>">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="about icon">
+          <h3>About Me</h3>
+          <div class="card-content">
+            <p style="color:var(--muted)">I’m Caleb, a strategic web project designer and hands-on coder who thrives at the intersection of precision and creativity. I specialize in building scalable, user-friendly portals that blend secure architecture with custom branding and responsive design.</p>
+          </div>
+          <button class="expand-btn" onclick="toggleCard('aboutCard', aboutFull)">Read More</button>
+          <button class="close-btn" onclick="toggleCard('aboutCard', aboutFull)">✖</button>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section" id="skills">
+        <div class="card" id="skillsCard" data-preview="<p style='color:var(--muted)'>Strategic Web Architecture — I specialize in designing scalable, secure, and user-centric web portals...</p>">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="skills icon">
+          <h3>Skills</h3>
+          <div class="card-content">
+            <p style="color:var(--muted)">Strategic Web Architecture — I specialize in designing scalable, secure, and user-centric web portals — from MVP workflows to full-featured admin systems.</p>
+          </div>
+          <button class="expand-btn" onclick="toggleCard('skillsCard', skillsFull)">Read More</button>
+          <button class="close-btn" onclick="toggleCard('skillsCard', skillsFull)">✖</button>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="section" id="experience">
+        <div class="card" id="experienceCard" data-preview="<p style='color:var(--muted)'>Over the years, I’ve led and contributed to a range of digital projects that blend precision engineering with thoughtful design...</p>">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" alt="experience icon">
+          <h3>Experience</h3>
+          <div class="card-content">
+            <p style="color:var(--muted)">Over the years, I’ve led and contributed to a range of digital projects that blend precision engineering with thoughtful design.</p>
+          </div>
+          <button class="expand-btn" onclick="toggleCard('experienceCard', experienceFull)">Read More</button>
+          <button class="close-btn" onclick="toggleCard('experienceCard', experienceFull)">✖</button>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section" id="projects">
+        <div class="card" id="projectsCard" data-preview="<p style='color:var(--muted)'>🚀 Projects section coming soon — exciting things are on the way.</p>">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/679/679720.png" alt="projects icon">
+          <h3>Projects</h3>
+          <div class="card-content">
+            <p style="color:var(--muted)">🚀 My projects section is still a work in progress... Exciting things are coming soon!</p>
+          </div>
+          <button class="expand-btn" onclick="toggleCard('projectsCard', projectsFull)">Read More</button>
+          <button class="close-btn" onclick="toggleCard('projectsCard', projectsFull)">✖</button>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="section" id="services">
+        <div class="card" id="servicesCard" data-preview="<p style='color:var(--muted)'>Comprehensive Tech Solutions — We offer legal tech services tailored to your needs...</p>">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3063/3063826.png" alt="services icon">
+          <h3>Services</h3>
+          <div class="card-content">
+            <p style="color:var(--muted)">We offer all legal tech services according to your choice — from full-stack web development to custom portal design.</p>
+          </div>
+          <button class="expand-btn" onclick="toggleCard('servicesCard', servicesFull)">Read More</button>
+          <button class="close-btn" onclick="toggleCard('servicesCard', servicesFull)">✖</button>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section" id="contact">
+        <div class="card" id="contactCard" data-preview="<p style='color:var(--muted)'>Get in touch — Reach Us to discuss your project.</p>">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="contact icon">
+          <h3>Contact</h3>
+          <div class="card-content">
+            <p style="color:var(--muted)">Reach out for inquiries, quotes or collaborations. Click Reach Us to open the contact form.</p>
+          </div>
+          <button class="expand-btn" onclick="openContact()">Reach Us</button>
+          <button class="close-btn" onclick="toggleCard('contactCard', contactFull)">✖</button>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2025 Nyams Tech</p>
+        <div class="socials">
+          <a href="https://facebook.com/NyamsPubg" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="fb"></a>
+          <a href="https://twitter.com/inc_nyams_ke" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="tw"></a>
+          <a href="https://instagram.com/mr_nyams_045" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="ig"></a>
+          <a href="https://linkedin.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="li"></a>
+          <a href="https://wa.me/254720736260" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="wa"></a>
+        </div>
+        <p>WhatsApp: +254720736260</p>
+      </footer>
+
+    </div><!-- container -->
+  </main>
+
+  <!-- Contact modal (placeholder) -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <button style="float:right;border:none;background:transparent;font-size:18px;color:var(--muted)" onclick="closeContact()">✖</button>
+      <h3>Reach Us</h3>
+      <form onsubmit="submitContact(event)">
+        <input class="input" name="first" placeholder="First Name" />
+        <input class="input" name="second" placeholder="Second Name" />
+        <input class="input" name="email" placeholder="Email Address" type="email" />
+        <input class="input" name="phone" placeholder="Phone Number" />
+        <textarea class="input" name="message" placeholder="Message" rows="4"></textarea>
+        <button type="submit" class="open-cta" style="width:100%; margin-top:8px">Send (demo)</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const aboutFull = `
+      <div style="line-height:1.8; text-align:left;">
+        <p>I’m Caleb, a strategic web project designer and hands-on coder who thrives at the intersection of precision and creativity. I specialize in building scalable, user-friendly portals that blend secure architecture with custom branding and responsive design. Whether I’m specifying detailed MVP workflows or troubleshooting cloud integrations, I bring clarity, persistence, and a deep respect for meaningful impact.</p>
+        <p>My work isn’t just about clean code — it’s about crafting digital experiences that resonate. I iterate fast, challenge conventions, and collaborate with heart. From university portals to community-driven platforms, I design with users in mind and vision at the core.</p>
+        <p>I believe in the power of thoughtful design, empathetic communication, and relentless refinement. Every project is a chance to push boundaries, remix possibilities, and build something that truly matters.</p>
+      </div>
+    `;
+
+    const skillsFull = `
+      <div style="line-height:1.8; text-align:left;">
+        <ul>
+          <li><strong>Strategic Web Architecture</strong><br>I specialize in designing scalable, secure, and user-centric web portals — from MVP workflows to full-featured admin systems. I define clear requirements, map intuitive user journeys, and build with long-term growth in mind.</li><br>
+          <li><strong>💻 Hands-On Coding Expertise</strong><br>I don’t just plan — I build. I write clean, modular code and structure projects for maintainability and performance. Whether it’s front-end polish or back-end logic, I deliver copy-pasteable solutions that work.</li><br>
+          <li><strong>🎨 Branding & UX Personalization</strong><br>I craft digital experiences that feel human. From color themes to responsive layouts, I optimize every detail to reflect the brand’s identity and connect with users emotionally.</li><br>
+          <li><strong>🔍 Relentless Troubleshooting</strong><br>I thrive on solving complex problems. Whether debugging a cloud database or refining access control logic, I dig deep, test hard, and don’t stop until it’s right.</li><br>
+          <li><strong>💬 Empathetic Communication</strong><br>I know how to connect — with users, collaborators, and communities. I write with warmth, clarity, and purpose, whether it’s a heartfelt message or a technical walkthrough.</li>
+        </ul>
+      </div>
+    `;
+
+    const experienceFull = `
+      <div style="line-height:1.8; text-align:left;">
+        <ul>
+          <li><strong>🏛 University Portal Development</strong><br>Spearheaded the design and implementation of a secure, responsive student portal with custom branding, admin access control, and real-time feature iteration. Defined workflows, structured modular codebases, and optimized UX for both students and staff.</li><br>
+          <li><strong>🌐 Strategic Web Projects</strong><br>Collaborated with organizations to build scalable MVPs, translating complex requirements into intuitive interfaces. Delivered actionable solutions that balance backend logic with front-end polish.</li><br>
+          <li><strong>☁ Cloud Integration & Troubleshooting</strong><br>Set up and refined MongoDB clusters, integrated cloud databases, and resolved deployment issues with persistence and precision. I don’t just fix problems — I future-proof systems.</li><br>
+          <li><strong>🎨 Creative Branding & UX Personalization</strong><br>Designed color themes, layout systems, and user journeys that reflect brand identity and enhance emotional connection. I treat every pixel as part of the story.</li><br>
+          <li><strong>🤝 Collaborative Digital Leadership</strong><br>Worked across teams to align technical goals with creative vision. I thrive in environments where strategy meets empathy, and where every feature serves a real-world need.</li>
+        </ul>
+      </div>
+    `;
+
+    const projectsFull = `
+      <div style="text-align:center; line-height:1.6;">
+        <img src="https://cdn-icons-png.flaticon.com/512/679/679720.png" alt="coming" style="width:100px;margin-bottom:12px;filter:drop-shadow(0 0 8px rgba(0,220,200,0.12));" />
+        <p>🚧 <strong>Projects in Progress</strong></p>
+        <p>I’m currently building a collection of projects that blend creativity, secure architecture, and user-centered design. Expect a university portal, portfolio platform, and several small web tools — demos and code will land here soon.</p>
+      </div>
+    `;
+
+    const servicesFull = `
+      <div style="line-height:1.8; text-align:left;">
+        <p><strong>Comprehensive Tech Solutions</strong><br>We offer all legal tech services according to your choice — from full-stack web development to custom portal design.</p>
+        <ul>
+          <li><strong>🌐 Web Development & Hosting</strong><br>Build secure, scalable, and user-friendly websites tailored to your brand and business goals.</li><br>
+          <li><strong>🛠 Custom Portals & MVPs</strong><br>Whether it’s a university portal, e-commerce system, or startup MVP, we design with precision and scale in mind.</li><br>
+          <li><strong>🎨 Branding & UI/UX Design</strong><br>We craft experiences — every layout, color, and interaction is designed to connect with users.</li><br>
+          <li><strong>☁ Cloud Integration & Support</strong><br>From database setup to troubleshooting, we ensure smooth operations and reliability.</li><br>
+          <li><strong>🔒 Secure Architecture & Maintenance</strong><br>Security and performance are core; we provide monitoring, updates, and optimization.</li>
+        </ul>
+      </div>
+    `;
+
+    const contactFull = `
+      <div style="line-height:1.6; text-align:left;">
+        <p>Use the Reach Us button in the footer to open the contact modal. For now this is a demo placeholder.</p>
+      </div>
+    `;
+  </script>
+</body>
+</html>
